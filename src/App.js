@@ -1,6 +1,8 @@
 import "./App.css";
 
 import { FloppyDisk } from "phosphor-react";
+
+import { BUTTON_TYPE } from "./constants/buttons";
 import PrimarySecondaryButton from "./components/PrimarySecondaryButton";
 
 function App() {
@@ -8,20 +10,20 @@ function App() {
     <div className="App">
       <div className="App-buttonContainer">
         <PrimarySecondaryButton
-          buttonType="primary"
+          buttonType={BUTTON_TYPE.PRIMARY}
           buttonText="Save as..."
           buttonIcon={<FloppyDisk />}
         />
 
         <PrimarySecondaryButton
-          buttonType="primary"
+          buttonType={BUTTON_TYPE.PRIMARY}
           buttonText="Save as..."
           buttonIcon={<FloppyDisk />}
           isDisabled
         />
 
         <PrimarySecondaryButton
-          buttonType="secondary"
+          buttonType={BUTTON_TYPE.SECONDARY}
           buttonText="Save as..."
           buttonIcon={<FloppyDisk />}
         />

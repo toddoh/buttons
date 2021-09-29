@@ -1,6 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import PropTypes from "prop-types";
 
+import { BUTTON_TYPE } from "../constants/buttons";
 import { BaseGenericButton } from "./ButtonStyles";
 
 const Button = styled(BaseGenericButton)`
@@ -9,7 +11,7 @@ const Button = styled(BaseGenericButton)`
   box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
 
   ${({ type }) =>
-    type === "primary"
+    type === BUTTON_TYPE.PRIMARY
       ? css`
           background: #0090d6;
           color: #fff;
@@ -57,6 +59,17 @@ const PrimarySecondaryButton = ({
       {buttonIcon}
     </Button>
   );
+};
+
+PrimarySecondaryButton.propTypes = {
+  buttonType: PropTypes.string,
+  buttonText: PropTypes.string,
+  buttonIcon: PropTypes.elementType,
+  isDisabled: PropTypes.bool,
+};
+
+PrimarySecondaryButton.defaultProps = {
+  buttonType: BUTTON_TYPE.PRIMARY,
 };
 
 export default PrimarySecondaryButton;
