@@ -1,10 +1,17 @@
 .App {
   text-align: center;
+  font-size: 1em;
+  margin: 25px;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.App-buttonContainer {
+  display: flex;
+  grid-gap: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,7 +21,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
